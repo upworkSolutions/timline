@@ -32,7 +32,7 @@ b) When I click show less, timeline should hide  all div elements except firts 3
 It is necessary to scroll to the END OF THE TIMELINE and not to the end of the page.
 And the scroll should be slow not fast
 You just need to adjust it so it scroll properly, that's all.
-
+In the button folder you have two pictures of how the scrolling should look like
 
 *HTML structure and CSS stylization should remain the same. But of course you can insert a new id, class or click event...
 You can delete the JS code or fix it how you think is better, I leave that to you.
