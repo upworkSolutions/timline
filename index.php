@@ -239,11 +239,26 @@
         if (value == "Show more") {
             showPoints.show("slow");
             showText.text("Show less");
-            $('html,body').animate({scrollTop: showText.offset().top}, 'slow');
+
+//            setTimeout(() => {
+//                console.log(showText.height())
+//                $('html,body').animate({scrollTop: showText.offset().top - $(window).height() + showText.parent().height()}, 'slow');
+//            }, 1000)
+
+            $('html,body').animate({scrollTop: showText.offset().top}, 'slow', () => {
+                $('html,body').animate({scrollTop: showText.offset().top - $(window).height() + showText.parent().height()}, 'fast');
+            })
         } else {
+            let count = 0
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+
             showPoints.slice(3).hide("slow");
+
+            $('html,body').animate({scrollTop: showText.offset().top}, 0, () => {
+                $('html,body').animate({scrollTop: showText.offset().top - $(window).height() + showText.parent().height()}, 0);
+            })
+
             showText.text("Show more");
-            element.scrollIntoView({behavior: "smooth"});
         }
     });
 
@@ -251,7 +266,7 @@
 
 <div class="second">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolorem ex nesciunt obcaecati quo reiciendis sint tempora voluptate. Doloribus ex illum ipsa iste laborum nemo quisquam quod. Ab assumenda eius, exercitationem id iste mollitia numquam provident quas quisquam quod? Aliquam aliquid asperiores at autem beatae dicta earum, est ex expedita fuga fugit hic impedit itaque labore maiores nihil numquam odit, possimus quasi qui quia quibusdam quis quisquam ratione recusandae reiciendis rem rerum tenetur ullam, velit. Autem deserunt eaque molestiae nemo quam quod suscipit? Animi corporis, est itaque iusto necessitatibus sapiente sequi. Ad adipisci asperiores beatae est excepturi id nobis quia quidem quisquam sequi soluta tempora totam, vitae! Amet, animi aperiam asperiores aut commodi consequuntur corporis delectus dolor earum eligendi eos eum exercitationem expedita illum in incidunt iste nisi perspiciatis porro, quae quia quis repellat repellendus reprehenderit rerum sed sequi similique tempora ullam unde? Aperiam, illum, officiis. Asperiores blanditiis dolor dolorem, est expedita itaque, neque obcaecati reiciendis, repudiandae suscipit tempora veritatis voluptate voluptates. Architecto dolorem illo ipsam iste laudantium minima officia, sit suscipit totam velit! A, animi deserunt dicta doloribus earum eligendi eum, expedita impedit itaque laudantium minus nam necessitatibus nemo odio officiis qui recusandae repellendus sint tenetur veritatis voluptas voluptate?</p>
-    
+
     <div>
         <img src="https://picjumbo.com/wp-content/uploads/alone-with-his-thoughts-1080x720.jpg" alt="" width="100%">
     </div>
