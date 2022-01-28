@@ -23,7 +23,7 @@ js code should do the following:
 This part is aslo done. 
 
 3. THIS PART REMAINED UNFINISHED
-When you click the button (show more / less), the page should scroll up or down but so that the button is always at the bottom of the page or close.
+When you click the button (show more / less), the page should scroll up or down but so that the button position is allways on bottom.
 
 a)When I click show more, timeline should show all div elements and scroll to button, not below it. Because below goes on others divs, text and images.
 It is necessary to scroll to the END OF THE TIMELINE and not to the end of the page.
