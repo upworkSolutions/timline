@@ -28,7 +28,7 @@ When you click the button (show more / less), the page should scroll up or down 
 a)When I click show more, timeline should show all div elements and scroll to button, not below it. Because below goes on others divs, text and images.
 It is necessary to scroll to the END OF THE TIMELINE and not to the end of the page.
 
-b) When I click show less, timeline should hide  all div elements except firts 3 div  and SCROLL to button should end on botoom of page.
+b) When I click show less, timeline should hide  all div elements except firts 3 div  and SCROLL to the button end.
 It is necessary to scroll to the END OF THE TIMELINE and not to the end of the page.
 And the scroll should be slow not fast
 You just need to adjust it so it scroll properly, that's all.
